@@ -1,8 +1,4 @@
 
-document.onkeydown = typing;
-
-function typing(event){
+export function log_event(event){
     console.log(event.key);
 }
-
-var plate_element = document.getElementsByClassName("plate")
