@@ -1,7 +1,12 @@
+@font-face {
+    font-family: 'Signika-Variable';
+    src: url('res/fonts/Signika-VariableFont_wght.ttf'); 
+}
+
 html, body {
 
-    background-color: rgb(32, 38, 46);
-    color: rgb(233, 232, 232);
+    background-color: #101020;
+    color: #ECECEC;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -22,14 +27,16 @@ html, body {
 
 .plate {
 
-    width: 900px;
-    height: 25%;
+    width: 800px;
+    height: 200px;
 
-    background-color: rgb(233, 232, 232);
-    color: rgb(32, 38, 46);
+    font-size: 80%;
+
+    background-color: #ECECEC;
+    color: #202040;
     border-radius: 30px;
     
-    box-shadow: 0px 0px 20px rgba(145, 49, 116, 0.39);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.39);
     
     display: flex;
     justify-content: center;
@@ -48,19 +55,47 @@ html, body {
 
     position: relative;
     
+    
+}
+
+.text_holder{
+    margin: 0;
+    height: 80%;
+    position: relative;
 }
 
 .text{
-    margin: 0;
-    height: 80%;
+    position: absolute;
+    font-family: Signika-Variable;
     margin-left:  10px;
-}
-.text #1{
+    width:90%;
+    height: 80%;
     text-align: justify;
+    padding-left: 10px;
+    background: linear-gradient(0deg, #ECECEC 10%, rgba(14,14,14,1) 40%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
 }
 
-.text #2{
+.text_overlay{
+    position: absolute;
+    background: black;
+    width:100%;
+    height: 80%;
+    background: linear-gradient(125deg, rgba(255,255,255,0) 40%, rgb(84, 56, 100, 0.2) 120%);
+}
+
+#p1{
+    text-align: justify;
+    padding-left: 10px;
+    
+}
+
+#p2{
     text-align: right;
+    color: #525252;
+    margin-right: 20px;
 }
 
 .links{
@@ -114,7 +149,7 @@ html, body {
 .img {  
     width: 100%;
     height: 100%;
-    background-image: url("res/1.jpg");
+    background-image: url("res/imgs/1.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     border-top-right-radius: 30px;
@@ -124,9 +159,10 @@ html, body {
     top: 0;
     left: 0;
 
-    filter: blur(8px);
-    transition: filter 1s;
-}  
+    
+    filter: blur(5px);
+    transition: all 0.5s;
+}
 
 
 .black_back{
@@ -143,5 +179,4 @@ html, body {
 
 :hover.plate .img{
     filter: blur(0px);
-    
 }
