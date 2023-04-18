@@ -1,5 +1,7 @@
+
+
 import { log_event } from "./key_even_loger.js";
-import { move_panel_up, move_panel_down } from "./move_panel.js";
+import { move_panel } from "./move_panel.js";
 
 document.onkeydown = process_key;
 
@@ -10,10 +12,21 @@ function process_key(event){
     
     var key = event.key;
     
-    if(key == "w"){
-        move_panel_up();
-    }
-    else if(key == "s"){
-        move_panel_down();
+    switch(key){
+        case 'q':
+            window.location.reload();
+            break;
+        case 'ArrowUp':
+            move_panel(100, 1);
+            break;
+        case 'ArrowDown':
+            move_panel(100, -1);
+            break;
     }
 }
+
+var lsv = 0;
+document.addEventListener("scroll", (event) => {
+    lsv = window.scrollY;
+    console.log(lsv);
+});
