@@ -22,11 +22,19 @@ function process_key(event){
         case 'ArrowDown':
             move_panel(100, -1);
             break;
+        case 'a':
+            break;
+        case 'd':
+            break;
+
     }
 }
+
+
+
 
 var lsv = 0;
 document.addEventListener("scroll", (event) => {
     lsv = window.scrollY;
-    console.log(lsv);
+    //console.log(lsv);
 });

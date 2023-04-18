@@ -6,8 +6,8 @@ var panel_y = 0;
 
 export function move_panel(distance, dir){
     
-    var moveable_element = document.getElementById("panel");
-    var style = window.getComputedStyle(moveable_element);
+    var moveable_element = document.getElementById("panel1");
+    //var style = window.getComputedStyle(moveable_element);
 
     moveable_element.style.transition = `transform 0.5s`;
 
