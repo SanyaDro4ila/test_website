@@ -16,15 +16,17 @@ function process_key(event){
         case 'q':
             window.location.reload();
             break;
-        case 'ArrowUp':
-            move_panel(100, 1);
+        case 'w':
+            move_panel(0, -200);
             break;
-        case 'ArrowDown':
-            move_panel(100, -1);
+        case 's':
+            move_panel(0, 200);
             break;
         case 'a':
+            move_panel(-200, 0);
             break;
         case 'd':
+            move_panel(200, 0);
             break;
 
     }
